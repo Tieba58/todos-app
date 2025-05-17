@@ -2,8 +2,8 @@
   <Header />
   <div class="container">
     <AddTodoPage v-if="page === 'ajouter'" />
-    <ModifyTodoPage v-if="page === 'modifier'" :id="param" />
-    <HomePage v-if="page == ''" />
+    <ModifyTodoPage v-else-if="page === 'modifier'" :id="param" />
+    <HomePage v-else-if="page == ''" />
     <NotFoundPage v-else />
 
   </div>

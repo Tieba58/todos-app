@@ -1,10 +1,11 @@
 <template>
     <label :for="id">{{ label }}</label>
     <div v-if="type === 'textarea'">
-        <textarea :id="id">{{ model }}</textarea>
+        <textarea :id="id" v-model="model">
+        </textarea>
     </div>
     <div v-else>
-        <input :type="type" :id="id" :value="model">
+        <input :type="type" :id="id" v-model="model"/>
     </div>
 
 </template>
